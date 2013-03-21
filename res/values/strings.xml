@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lights Out</string>
+    <string name="action_settings">Settings</string>
+    <string name="emerald_description">Clickable Emerald</string>
+    <string name="moves">Moves: -</string>
+    <string name="quit">Quit</string>
+    <string name="reset">Reset</string>
+    <string name="new_game">New Game</string>
+    <string name="back">Back</string>
+
+    <color name="start_screen_background">#3D3242</color>
+    <color name="game_screen_background">#3D3242</color>
+    <color name="light_on">#B95835</color>
+    <color name="light_off">#EECD86</color>
+    <color name="button_one">#7A3E48</color>
+    <color name="button_two">#4A4A4A</color>
+
+</resources>
