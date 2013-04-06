@@ -316,25 +316,6 @@
             android:layout_alignParentBottom="true"
             android:splitMotionEvents="false" >
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="4dip"
-                android:layout_marginRight="4dip"
-                android:background="?android:attr/dividerVertical" />
-
-            <View
-                android:id="@+id/newgame_quit_seperator"
-                android:layout_width="1dip"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="4dip"
-                android:layout_marginTop="4dip"
-                android:background="?android:attr/dividerVertical" />
-
             <Button
                 android:id="@+id/reset"
                 android:layout_width="wrap_content"
@@ -342,7 +323,6 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/newgame_quit_seperator"
                 android:background="@color/button_one"
                 android:text="@string/reset" />
 
@@ -353,10 +333,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@id/newgame_quit_seperator"
                 android:background="@color/button_one"
-                android:text="@string/back"
-                 />
+                android:text="@string/back" />
         </RelativeLayout>
     </LinearLayout>
 
