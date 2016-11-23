@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start_screen_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <io.deschene.lightsout.widgets.FontFitTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/new_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="@color/button_one"
+        android:text="@string/new_game" />
+
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/new_game"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/new_game"
+        android:background="@color/button_one"
+        android:text="@string/quit" />
+
+</RelativeLayout>

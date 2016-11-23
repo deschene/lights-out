@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="light_on">#00ff00</color>
+    <color name="light_off">#ffffff</color>
+
+    <color name="start_screen_background">#e6f833</color>
+    <color name="button_one">#77b118</color>
+    <color name="game_screen_background">#000000</color>
+
+
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lights Out</string>
+
+    <string name="new_game">New Game</string>
+    <string name="quit">Quit</string>
+    <string name="reset">Reset</string>
+    <string name="back">Back</string>
+    <string name="moves">Moves: </string>
+
+</resources>
