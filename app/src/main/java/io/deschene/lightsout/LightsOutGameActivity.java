@@ -4,13 +4,13 @@ import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
 
 import io.deschene.lightsout.model.LightButton;
 import io.deschene.lightsout.model.LightsOutGame;
