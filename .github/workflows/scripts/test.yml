@@ -1,0 +1,10 @@
+name: Test
+
+on: [push]
+
+jobs:
+
+  run:
+    runs-on: macos-latest
+    steps:
+      - run: echo "🎉This is just a test."
