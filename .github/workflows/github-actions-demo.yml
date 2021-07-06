@@ -21,9 +21,10 @@ jobs:
         with:
           api-level: 29
           target: google_apis
+          profile: Pixel 4 XL
           script: |
             avdmanager list
-            ./gradlew :screenshot:sdk
+            ./gradlew clean
 
 #      - name: Upload Screenshots Artifact
 #        uses: actions/upload-artifact@v2
