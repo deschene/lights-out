@@ -21,7 +21,9 @@ jobs:
         with:
           api-level: 29
           target: google_apis
-          script: ./gradlew clean
+          script: |
+            avdmanager list
+            ./gradlew :screenshot:sdk
 
 #      - name: Upload Screenshots Artifact
 #        uses: actions/upload-artifact@v2
