@@ -24,6 +24,8 @@ jobs:
           profile: Pixel 4 XL
           script: |
             avdmanager list
+            adb logcat -c
+            adb logcat *:E &
             ./gradlew clean
 
 #      - name: Upload Screenshots Artifact
