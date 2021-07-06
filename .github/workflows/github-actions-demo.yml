@@ -21,7 +21,7 @@ jobs:
         with:
           api-level: 29
           target: google_apis
-          profile: Pixel 4 XL
+#          profile: pixel_4_xl
           script: |
             avdmanager list
             adb logcat -c
