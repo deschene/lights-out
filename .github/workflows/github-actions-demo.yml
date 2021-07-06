@@ -8,8 +8,9 @@ jobs:
 
   run:
     runs-on: macos-latest
-    matrix:
-      api-level: [29]
+    strategy:
+      matrix:
+        api-level: [29]
     steps:
       - uses: actions/checkout@v2
 
