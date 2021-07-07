@@ -45,7 +45,9 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: ./gradlew clean
+          script: |
+            avdmanager list
+            ./gradlew clean
 
 #      - name: Android Emulator Runner
 #        uses: ReactiveCircus/android-emulator-runner@v2.15.0
