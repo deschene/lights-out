@@ -34,7 +34,7 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           force-avd-creation: false
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none 1440x3040
+          emulator-options: -no-window 1440x3040 -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
           script: echo "Generated AVD snapshot for caching."
 
@@ -43,7 +43,7 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none 1440x3040
+          emulator-options: -no-snapshot-save -no-window 1440x3040 -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
           script: |
             avdmanager list
