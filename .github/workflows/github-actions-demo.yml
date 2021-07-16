@@ -1,0 +1,78 @@
+name: SDK Screenshots
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+
+  run:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        api-level: [30]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: AVD cache
+        uses: actions/cache@v2
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: avd-${{ matrix.api-level }}-foo
+
+      - name: create AVD and generate snapshot for caching
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          profile: pixel_4_xl
+          force-avd-creation: false
+          emulator-options: -no-window -skin 1440x3040 -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: false
+          arch: x86
+          target: google_apis
+          script: avdmanager list
+
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          profile: pixel_4_xl
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -skin 1440x3040 -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          arch: x86
+          target: google_apis
+          script: |
+            avdmanager list
+            ./gradlew clean
+
+#      - name: Android Emulator Runner
+#        uses: ReactiveCircus/android-emulator-runner@v2.15.0
+#        with:
+#          api-level: 29
+#          target: google_apis
+#                    profile: pixel_4_xl
+#          script: |
+#            avdmanager list
+#            adb logcat -c
+#            adb logcat *:E &
+#            ./gradlew clean
+
+#      - name: Upload Screenshots Artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: sdk-screenshots
+#
+#          path: screenshot/sdk/
+#          retention-days: 5
+
