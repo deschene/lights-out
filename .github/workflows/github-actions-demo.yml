@@ -39,6 +39,7 @@ jobs:
           emulator-options: -no-window -skin 1440x3040 -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
           arch: x86_64
+          target: google_apis
           script: avdmanager list
 
       - name: run tests
@@ -50,6 +51,7 @@ jobs:
           emulator-options: -no-snapshot-save -no-window -skin 1440x3040 -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
           arch: x86_64
+          target: google_apis
           script: |
             avdmanager list
             ./gradlew clean
